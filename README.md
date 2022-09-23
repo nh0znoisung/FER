@@ -26,8 +26,8 @@ We would summarize all the state-of-the-art and trendy methods for FER (Facial e
 
 |Model|Paper name|Paper|Github|Status|
 |--|--|--|--|--|--|
-|Multi-task EfficientNet-B2|Classifying emotions and engagement in online learning based on a single facial expression recognition neural network (IEEE 2022)|[Link](https://ieeexplore.ieee.org/document/9815154)|[Link](https://github.com/HSE-asavchenko/face-emotion-recognition)|:white_check_mark:|
-|DAN|Distract Your Attention: Multi-head Cross Attention Network for Facial Expression Recognition (2021)|[Link](https://arxiv.org/pdf/2109.07270v4.pdf)|[Link](https://github.com/yaoing/dan)|In process|
+<!-- |Multi-task EfficientNet-B2|Classifying emotions and engagement in online learning based on a single facial expression recognition neural network (IEEE 2022)|[Link](https://ieeexplore.ieee.org/document/9815154)|[Link](https://github.com/HSE-asavchenko/face-emotion-recognition)|:white_check_mark:|
+|DAN|Distract Your Attention: Multi-head Cross Attention Network for Facial Expression Recognition (2021)|[Link](https://arxiv.org/pdf/2109.07270v4.pdf)|[Link](https://github.com/yaoing/dan)|In process| -->
 <!-- |FAN|Frame attention networks for facial expression recognition in videos (2019)|[Link](https://arxiv.org/pdf/1907.00193v2.pdf)|[Link](https://github.com/Open-Debin/Emotion-FAN)|In process|
 |DeepEmotion|Deep-Emotion: Facial Expression Recognition Using Attentional Convolutional Network (2019)|[Link](https://arxiv.org/pdf/1902.01019v1.pdf)|[Link](https://github.com/omarsayed7/Deep-Emotion)|No pre-trained model|
 |Ensemble with Shared Representations
