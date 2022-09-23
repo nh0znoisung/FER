@@ -50,7 +50,11 @@ model = Net()
 # print(net.forward(torch.randn(1, 3, 32, 32)))
 # ./model1.pt
 # model = torch.load("model.pt", map_location="cpu")
-model = torch.load("./pretrain_models/enet_b0_7.pt", map_location="cpu")
+
+# fan_Resnet18_FER+_pytorch.pth.tar
+model = torch.load("./pretrain_models/fan_Resnet18_FER+_pytorch.pth.tar", map_location="cpu")
+# print(model.eval())
+print(model["state_dict"])
 # torch.save(model, 'model.pt')
 # model = torch.load("./models/LFW-FER/enet_b0_7/model_1_81.1582.pth", map_location="cpu")
 
@@ -94,21 +98,21 @@ model = torch.load("./pretrain_models/enet_b0_7.pt", map_location="cpu")
 
 
 
-import os
-from os import path
+# import os
+# from os import path
 
-print(path.isdir("./models/LFW-FER/enet_b0_8_best_afw/"))
+# print(path.isdir("./models/LFW-FER/enet_b0_8_best_afw/"))
 
-dir_path = f"./models/LFW-FER/enet_b0_8_best_afew/"
-for root, dirs, files in os.walk(dir_path, topdown=False):
-    e = 0
-    if(len(files) == 0):
-        break
-    for file in files:
-        # print(file.split("_")[1])
-        e = max(e, int(file.split("_")[1]))
-    for file in files:
-        if f"_{e}_" in file:
-            print(file)
-            # os.remove(path.join(root, file))
-    break
+# dir_path = f"./models/LFW-FER/enet_b0_8_best_afew/"
+# for root, dirs, files in os.walk(dir_path, topdown=False):
+#     e = 0
+#     if(len(files) == 0):
+#         break
+#     for file in files:
+#         # print(file.split("_")[1])
+#         e = max(e, int(file.split("_")[1]))
+#     for file in files:
+#         if f"_{e}_" in file:
+#             print(file)
+#             # os.remove(path.join(root, file))
+#     break
