@@ -33,8 +33,8 @@ We would summarize all the state-of-the-art and trendy methods for FER (Facial e
 |Ensemble with Shared Representations
 (ESR-9)|Efficient Facial Feature Learning with Wide Ensemble-based Convolutional Neural Networks (2020)|[Link](https://arxiv.org/pdf/2001.06338v1.pdf)|[Link](https://github.com/siqueira-hc/Efficient-Facial-Feature-Learning-with-Wide-Ensemble-based-Convolutional-Neural-Networks)|10 pre-trained models|
 |RAN|Region Attention Networks for Pose and Occlusion Robust Facial Expression Recognition (2019)|[Link](https://arxiv.org/pdf/1905.04075v2.pdf)|[Link](https://github.com/kaiwang960112/Challenge-condition-FER-dataset)|1 pre-trained model|
-|Ours (VGG-F)|Pre-training strategies and datasets for facial representation learning (2021)|[Link](https://arxiv.org/pdf/2103.16554v2.pdf)|[Link](https://github.com/1adrianb/unsupervised-face-representation)||
-|...|Challenges in Representation Learning: A report on three machine learning contests (2013)|[Link](https://arxiv.org/pdf/1307.0414v1.pdf)|[Link](https://github.com/phamquiluan/ResidualMaskingNetwork)||
+|Ours (VGG-F)|Pre-training strategies and datasets for facial representation learning (2021)|[Link](https://arxiv.org/pdf/2103.16554v2.pdf)|[Link](https://github.com/1adrianb/unsupervised-face-representation)|Pending|
+|...|Challenges in Representation Learning: A report on three machine learning contests (2013)|[Link](https://arxiv.org/pdf/1307.0414v1.pdf)|[Link](https://github.com/phamquiluan/ResidualMaskingNetwork)|Pending|
 
 <!-- In process
 :white_check_mark: -->
