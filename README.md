@@ -48,7 +48,8 @@ We use the pre-trained model of state-of-the-art model for FER task for differen
 |enet_b0_8_best_afew.pt|Multi-task EfficientNet-B2|87.3812|41.5584|76.5870|
 |enet_b0_8_best_vgaf.pt|Multi-task EfficientNet-B2|86.6033|57.2294|75.5153|
 |enet_b0_8_va_mtl.pt|Multi-task EfficientNet-B2|87.6404|47.0996|76.8343|
-|enet_b2_8.pt|Multi-task EfficientNet-B2|87.4676|56.1039|76.9167
+|enet_b2_8.pt|Multi-task EfficientNet-B2|87.4676|56.1039|76.9167|
+|fan_Resnet18_MS1M_pytorch.pth.tar|FAN|80.2074|55.7576|55,9340|
 
 <!-- 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/classifying-emotions-and-engagement-in-online/facial-expression-recognition-on-affectnet)](https://paperswithcode.com/sota/facial-expression-recognition-on-affectnet?p=classifying-emotions-and-engagement-in-online)
