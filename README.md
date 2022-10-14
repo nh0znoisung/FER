@@ -40,17 +40,18 @@ We would summarize all the state-of-the-art and trendy methods for FER (Facial e
 
 
 ## Train the pre-trained model with dataset
-We use the pre-trained model of state-of-the-art model for FER task for different dataset, change the last layer classifier into 3 nodes instead of 7 or 8 original expressions in order to predict only 3 expression neutral, possitive and negative.
+We use the pre-trained model of state-of-the-art model for FER task for different dataset, change the last layer classifier into 3 nodes instead of 7 or 8 original expressions in order to predict only 3 expression neutral, possitive and negative. Train with 50 epochs.
 
 |Pre-trained Model|Model|LFW-FER|M-LFW-FER|M-LFW-FER-face-cut|
 |--|--|--|--|--|
 |enet_b0_7.pt|Multi-task EfficientNet-B2|87.4676|38.6147|71.4757|
-|enet_b0_8_best_afew.pt|Multi-task EfficientNet-B2|87.3812|41.5584|76.5870|
-|enet_b0_8_best_vgaf.pt|Multi-task EfficientNet-B2|86.6033|57.2294|75.5153|
-|enet_b0_8_va_mtl.pt|Multi-task EfficientNet-B2|87.6404|47.0996|76.8343|
-|enet_b2_8.pt|Multi-task EfficientNet-B2|87.4676|56.1039|76.9167|
-|fan_Resnet18_MS1M_pytorch.pth.tar|FAN|80.2074|55.7576|55,9340|
-
+|enet_b2_7.pt|Multi-task EfficientNet-B2|88.9901|55.2950|77.7940|
+|enet_b2_8.pt|Multi-task EfficientNet-B2|88.4586|57.0348|77.7194|
+|enet_b0_8_best_afew.pt|Multi-task EfficientNet-B2|88.3827|55.1437|76.0690|
+|enet_b0_8_best_vgaf.pt|Multi-task EfficientNet-B2|87.3956|57.2294|76.7442|
+|enet_b0_8_va_mtl.pt|Multi-task EfficientNet-B2|87.6404|47.0996|76.5191|
+|fan_Resnet18_MS1M_pytorch.pth.tar|FAN|86.4844|55.7576|73.0683|
+|fan_Resnet18_FER+_pytorch.pth.tar|FAN|84.6621|54.0847|75.6189|
 <!-- 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/classifying-emotions-and-engagement-in-online/facial-expression-recognition-on-affectnet)](https://paperswithcode.com/sota/facial-expression-recognition-on-affectnet?p=classifying-emotions-and-engagement-in-online)
      -->

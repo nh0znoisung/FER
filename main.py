@@ -104,6 +104,7 @@ class FERRecognition:
 
         path = FERRecognition.get_model_path(self.model_name)
         self.model = torch.load(path, map_location=self.device)
+            
 
         self.model = FERRecognition.preprocessing_model(self.model)
 

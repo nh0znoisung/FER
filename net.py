@@ -52,9 +52,19 @@ model = Net()
 # model = torch.load("model.pt", map_location="cpu")
 
 # fan_Resnet18_FER+_pytorch.pth.tar
-model = torch.load("./pretrain_models/fan_Resnet18_FER+_pytorch.pth.tar", map_location="cpu")
+model = torch.load("./pretrain_models/enet_b2_8.pt", map_location="cpu")
+# model = torch.load("./pretrain_models/backbone.pth", map_location="cpu")
+# model = torch.load("./pretrain_models/rank_0_softmax_weight.pt", map_location="cpu")
+# model = torch.load("./pretrain_models/fan_Resnet18_FER+_pytorch.pth.tar", map_location="cpu")
+print(type(model))
+# print(model)
+# print(model["state_dict"].keys())
+
+# dict, torch.Tensor, collections.OrderedDict
+
 # print(model.eval())
-print(model["state_dict"])
+# print(model)
+# print(model["state_dict"])
 # torch.save(model, 'model.pt')
 # model = torch.load("./models/LFW-FER/enet_b0_7/model_1_81.1582.pth", map_location="cpu")
 
@@ -67,52 +77,6 @@ print(model["state_dict"])
 # # print(model(torch.randn(1, 3, 260, 260)))
 # print(model.eval())
 
-# import torch.optim as optim
-
-# criterion = nn.CrossEntropyLoss()
-# optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
-
-# for epoch in range(2):  # loop over the dataset multiple times
-
-#     running_loss = 0.0
-#     for i, data in enumerate(trainloader, 0):
-#         # get the inputs; data is a list of [inputs, labels]
-#         inputs, labels = data
-
-#         # zero the parameter gradients
-#         optimizer.zero_grad()
-
-#         # forward + backward + optimize
-#         outputs = net(inputs)
-#         loss = criterion(outputs, labels)
-#         loss.backward()
-#         optimizer.step()
-
-#         # print statistics
-#         running_loss += loss.item()
-#         if i % 2000 == 1999:    # print every 2000 mini-batches
-#             print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 2000:.3f}')
-#             running_loss = 0.0
-
-# print('Finished Training')
+#
 
 
-
-# import os
-# from os import path
-
-# print(path.isdir("./models/LFW-FER/enet_b0_8_best_afw/"))
-
-# dir_path = f"./models/LFW-FER/enet_b0_8_best_afew/"
-# for root, dirs, files in os.walk(dir_path, topdown=False):
-#     e = 0
-#     if(len(files) == 0):
-#         break
-#     for file in files:
-#         # print(file.split("_")[1])
-#         e = max(e, int(file.split("_")[1]))
-#     for file in files:
-#         if f"_{e}_" in file:
-#             print(file)
-#             # os.remove(path.join(root, file))
-#     break
