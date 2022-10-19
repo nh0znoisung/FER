@@ -1,12 +1,12 @@
 import torch 
 
 # Option 1: passing weights param as string
-model = torch.hub.load("pytorch/vision", "resnet18", weights="IMAGENET1K_V1")
+# model = torch.hub.load("pytorch/vision", "resnet18", weights="IMAGENET1K_V1")
 # model = torch.load("./pretrain_models/enet_b2_8.pt", map_location="cpu")
 
-model.fc = torch.nn.Linear(512, 8)
+# model.fc = torch.nn.Linear(512, 8)
 # print(model.eval())
-state_dict = torch.load("./pretrain_models/fan_Resnet18_FER+_pytorch.pth.tar", map_location="cpu")["state_dict"]
+model = torch.load("./pretrain_models/dan_affectnet7.pth", map_location="cpu")
 # print(type(state_dict))
 # for k,v in state_dict.items():
 #     # print(k.partition('model.')[2])
@@ -14,11 +14,37 @@ state_dict = torch.load("./pretrain_models/fan_Resnet18_FER+_pytorch.pth.tar", m
 #     break
 # state_dict = list(state_dict.keys())[0]
 # print(state_dict)
-state_dict = {k.partition('module.')[2]: v for k,v in state_dict.items()}
-model.load_state_dict(state_dict)
+# state_dict = {k.partition('module.')[2]: v for k,v in state_dict.items()}
+# model.load_state_dict(state_dict)
 # print(model.eval())
+# print(model) to much
+print(model.keys())
+optimizer_state_dict = model["optimizer_state_dict"]
+print(type(optimizer_state_dict))
+print(optimizer_state_dict.keys())
+optimizer_state_dict_state = optimizer_state_dict["state"]
+print(type(optimizer_state_dict_state))
+print(optimizer_state_dict_state.keys()) #0-152
+# print(optimizer_state_dict_state[0])
+print(type(optimizer_state_dict_state[0]))
+print(optimizer_state_dict_state[0].keys()) #step, exp_avg, exp_avg_sq
+print(optimizer_state_dict_state[0]["step"]) #step
+# print(optimizer_state_dict_state[0]["exp_avg"]) #exp_avg
+print(type(optimizer_state_dict_state[0]["exp_avg"])) #exp_avg
+print(optimizer_state_dict_state[0]["exp_avg"].size())
 
+print(type(optimizer_state_dict_state[0]["exp_avg_sq"]) is torch.Tensor)
+print(type(optimizer_state_dict_state[0]["exp_avg_sq"])) #exp_avg_sq
+print(type(str(optimizer_state_dict_state[0]["exp_avg_sq"].size())))
+print(str(optimizer_state_dict_state[0]["exp_avg_sq"].size()))
 
+# model: dict
+#     | optimizer_state_dict: dict
+#         | 
+#     | params_groups: dict
+
+optimizer_state_dict_param_groups = optimizer_state_dict["param_groups"]
+print(type(optimizer_state_dict_state))
 
 # Option 2: passing weights param as enum
 # weights = torch.hub.load("pytorch/vision", "get_weight", weights="ResNet50_Weights.IMAGENET1K_V2")
