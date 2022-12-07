@@ -39,7 +39,7 @@ def get_edge(landmarks):
     return x_min, y_min, x_max, y_max
 
 # Crop only eyes and eyebrows
-def crop_image(image):
+def crop_image(image, is_draw=False):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # Detect the face
     rects = detector(gray, 1)
@@ -49,6 +49,11 @@ def crop_image(image):
     for rect in rects:
         # Get the landmark points
         landmarks = predictor(gray, rect)
+        if is_draw:
+            tmp_image = image.copy()
+            for attr in ATTR:
+                cv2.circle(tmp_image, (landmarks.part(attr).x, landmarks.part(attr).y), 1, (0, 0, 255), -1)
+                cv2.imwrite("image_draw.png", tmp_image)
         x_min, y_min, x_max, y_max = get_edge(landmarks)
         if x_min == -1e9:
             return None
@@ -100,7 +105,9 @@ import os
 
 def process(file_path:str):
     image = cv2.imread(file_path)
-    cropped_image = crop_image(image)
+    # Use crop_image() for crop eyes and eyebrows
+    # Use crop_faec() for face detection
+    cropped_image = crop_image(image, True)
     if cropped_image is None:
         return
     target_path = file_path.replace("/M-LFW-FER/", "/M-LFW-FER-face-detect/")
